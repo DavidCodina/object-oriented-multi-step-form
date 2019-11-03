@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Multi Step Form</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+
+<body>
+  <header>
+    <h1 class="fancy-h1">Multi-Step Form</h1>
+  </header>
+
+  <main>
+    <!-- =====================================================================
+
+    ====================================================================== -->
+
+    <h2 class="form-title fancy-h2">Register for our fabulous services!</h2>
+
+
+    <form id="stepForm1" class="multi-step-form" name="stepForm1" action="">
+      <div class="tab">
+        <h3 class="fancy-h3">Name</h3>
+        <div class="form-group">
+          <label>First Name:</label>
+          <input class="form-control" name="firstName" placeholder="First name">
+        </div>
+        <div class="form-group">
+          <label>Last Name:</label>
+          <input class="form-control" name="lastName" placeholder="Last name">
+        </div>
+      </div>
+
+
+      <div class="tab">
+        <h3 class="fancy-h3">Contact Information</h3>
+        <div class="form-group">
+          <label>Email:</label>
+          <input class="form-control" name="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label>Phone:</label>
+          <input  class="form-control" name="phone" placeholder="Phone">
+        </div>
+      </div>
+
+
+      <div class="tab">
+        <h3 class="fancy-h3">Birthday</h3>
+        <div class="form-group">
+          <label>Day:</label>
+          <input class="form-control" name="day" placeholder="dd">
+        </div>
+        <div class="form-group">
+          <label>Month:</label>
+          <input class="form-control" name="month" placeholder="mm">
+        </div>
+        <div class="form-group">
+          <label>Year:</label>
+          <input class="form-control" name="year" placeholder="yyyy">
+        </div>
+      </div>
+
+
+      <div class="tab">
+        <h3 class="fancy-h3">Login Information</h3>
+        <div class="form-group">
+          <label>User Name:</label>
+          <input class="form-control" name="userName" placeholder="User name (handle)">
+        </div>
+        <div class="form-group">
+          <label>Password:</label>
+          <input class="form-control" name="password" placeholder="Password...">
+        </div>
+      </div>
+
+
+      <div class="tab success-tab">
+        <h1 class="fancy-h1">Success!</h1>
+        <p>You can now login with your credentials.</p>
+      </div>
+
+
+      <div class="controller-container">
+        <button class="previous-button btn btn-primary" type="button">Previous</button>
+        <button class="next-button btn btn-primary"     type="button">Next</button>
+      </div>
+
+
+      <div class="indicator-container">
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+      </div>
+
+
+      <div class='form-submit-success-check'>&#10003;</div>
+    </form>
+  </main>
+
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,860 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900&display=swap');
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* { line-height: 1; }
+
+html {
+  font-family: sans-serif;
+  line-height: 1;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background-color: black;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Open Sans", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  line-height: 1;
+  color: #333;
+  text-align: left;
+  background-color: #333;
+}
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+
+/* =============================================================================
+
+============================================================================= */
+
+
+header {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.65);
+  border-bottom: 2px solid black;
+  box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+header h1.fancy-h1 {
+  -webkit-text-stroke-color: #61DAFB;
+  padding: 25px 0;
+}
+
+
+/* =============================================================================
+
+============================================================================= */
+
+
+main {
+  flex: 1;
+  position: relative;
+  /* Clear the fixed header */
+  padding: 150px 50px 100px 50px;
+  background-color: #282c34;
+  background-color: floralWhite;
+}
+
+.article {
+  margin: 0 auto 100px auto;
+  padding: 25px;
+  color: #333;
+  background-color: snow;
+  border: 2px solid #61DAFB;
+  border-radius: 1.5rem  !important;
+}
+
+
+/* =============================================================================
+                                Typography
+============================================================================= */
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+h1 { font-size: 2.5rem;  }
+h2 { font-size: 2rem;    }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem;  }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem;    }
+
+
+/* ===========================
+           p
+=========================== */
+
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ===========================
+           <a>
+=========================== */
+
+
+a {
+  color: #61DAFB;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: rgb(77, 198, 231);
+  text-decoration: underline;
+}
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+
+
+/* ===========================
+          pre
+=========================== */
+
+
+pre {
+  display: block;
+  margin: 50px auto;
+  padding: 0;
+  width: 90%;
+  color: #333;
+  font-family: monospace;
+  font-size: 1rem;
+  background-color: rgb(230,230,230);
+  border: 1px solid gray;
+  border-radius: 5px;
+  overflow: auto;
+  -ms-overflow-style: scrollbar;
+}
+
+
+/* ===========================
+          code
+=========================== */
+
+
+code, samp, kbd {
+  padding: 0 5px;
+  color: #333;
+  font-family: monospace;
+  font-size: inherit;
+  background-color: rgb(230,230,230);
+  border: 1px solid gray;
+  border-radius: 0.25rem;
+}
+
+code:not(pre code){
+  white-space: nowrap;
+}
+
+pre code {
+  margin:0;
+  padding: 0;
+  font-size: 1em;
+  color: #333;
+  line-height: 1.25;
+  word-break: normal;
+  background-color: transparent;
+  border: none;
+  border-radius:0px;
+}
+
+a > code {
+  color: inherit;
+}
+
+
+/* ===========================
+          .fancy-*
+=========================== */
+
+
+.fancy-h1 {
+  margin: 0;
+  padding: 0;
+  color: snow;
+  text-align: center;
+  font-size: 50px;
+  font-family: Montserrat;
+  letter-spacing: 3px;
+  line-height: 1;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: violet;
+  text-shadow: -3px 3px 6px rgba(0,0,0,0.15);
+}
+
+.fancy-h2 {
+  color: snow;
+  font-size: 40px;
+  font-family: Montserrat;
+  letter-spacing: 1px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #61DAFB;
+  text-shadow: -2px 2px 4px rgba(0,0,0,0.15);
+}
+
+.fancy-h3 {
+  color: snow;
+  font-size: 32px;
+  font-family: Montserrat;
+  letter-spacing: 1px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: violet;
+  text-shadow: -2px 2px 4px rgba(0,0,0,0.15);
+}
+
+
+/* =============================================================================
+                              button styles
+============================================================================= */
+
+
+button {
+  margin: 0;
+  color: #333;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+  line-height: 1.5;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  border-radius: 0;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .btn { transition: none; }
+}
+
+.btn:hover {
+  color: #212529;
+  text-decoration: none;
+}
+
+.btn:focus, .btn.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn.disabled, .btn:disabled {
+  opacity: 0.65;
+}
+
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+
+/* ============================
+      Button Tweaks.
+=========================== */
+
+
+.btn.btn-primary {
+  background-color: #61DAFB;
+  border-color: rgba(0,0,0,0.15);
+}
+
+.btn.btn-primary:active { background-color: #3fd2fa !important; }
+
+
+/* =============================================================================
+                          Preliminary Form Styles
+============================================================================= */
+
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  overflow: visible;
+}
+
+select {
+  text-transform: none;
+  word-wrap: normal;
+}
+
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  white-space: normal;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-control {
+    transition: none;
+  }
+}
+
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.form-control::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.form-control::-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.form-control::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+
+.form-control:disabled, .form-control[readonly] {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+
+select.form-control:focus::-ms-value {
+  color: #495057;
+  background-color: #fff;
+}
+
+.form-control-file,
+.form-control-range {
+  display: block;
+  width: 100%;
+}
+
+.col-form-label {
+  padding-top: calc(0.375rem + 1px);
+  padding-bottom: calc(0.375rem + 1px);
+  margin-bottom: 0;
+  font-size: inherit;
+  line-height: 1.5;
+}
+
+.col-form-label-lg {
+  padding-top: calc(0.5rem + 1px);
+  padding-bottom: calc(0.5rem + 1px);
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.col-form-label-sm {
+  padding-top: calc(0.25rem + 1px);
+  padding-bottom: calc(0.25rem + 1px);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.form-control-plaintext {
+  display: block;
+  width: 100%;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  margin-bottom: 0;
+  line-height: 1.5;
+  color: #212529;
+  background-color: transparent;
+  border: solid transparent;
+  border-width: 1px 0;
+}
+
+.form-control-plaintext.form-control-sm,
+.form-control-plaintext.form-control-lg {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.form-control-sm {
+  height: calc(1.5em + 0.5rem + 2px);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+.form-control-lg {
+  height: calc(1.5em + 1rem + 2px);
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+select.form-control[size], select.form-control[multiple] {
+  height: auto;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-text {
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.form-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.form-row > .col,
+.form-row > [class*="col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.form-check {
+  position: relative;
+  display: block;
+  padding-left: 1.25rem;
+}
+
+.form-check-input {
+  position: absolute;
+  margin-top: 0.3rem;
+  margin-left: -1.25rem;
+}
+
+.form-check-input:disabled ~ .form-check-label {
+  color: #6c757d;
+}
+
+.form-check-label {
+  margin-bottom: 0;
+}
+
+.form-check-inline {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 0;
+  margin-right: 0.75rem;
+}
+
+.form-check-inline .form-check-input {
+  position: static;
+  margin-top: 0;
+  margin-right: 0.3125rem;
+  margin-left: 0;
+}
+
+/* =============================================================================
+                               .multi-step-form 
+============================================================================= */
+
+
+.form-title {
+  text-align: center;
+  line-height: 1.25;
+}
+
+.multi-step-form {
+  width: 70%;
+  min-width: 300px;
+  margin: 100px auto;
+  padding: 40px;
+  font-family: inherit;
+  background-color: white;
+  border: 2px solid #61DAFB;
+  border-radius: 25px;
+}
+
+.multi-step-form .form-group {
+  margin-bottom: 25px;
+}
+
+.multi-step-form label {
+  font-weight: bold;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: rgba(200,0,0,0.25);
+  border: 1px solid #c80000; /* Same color as above. */
+}
+
+/* Hide all steps by default: */
+.tab { display: none; }
+
+.tab .fancy-h3 { text-align: center; }
+
+
+/* =============================
+         .indicator
+============================= */
+
+
+.indicator-container {
+  text-align:center;
+  margin-top:40px; /* ? */
+}
+
+.indicator {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  margin: 0 10px;
+  background-color: rgb(230,230,230);
+  border: 0.5px solid rgba(0,0,0,0.5);
+  border-radius: 50%;
+  box-shadow: -1px 1px 2px rgba(0,0,0,0.25);
+}
+
+.indicator.active {
+  background-color: #61DAFB;
+}
+
+/* Mark the steps that are finished and valid: */
+.indicator.finish {
+  position: relative;
+  background-color: transparent;
+  border: 0.5px solid rgba(0,0,0,0.25);
+  box-shadow: none;
+}
+
+.indicator.active.finish {
+  background-color: #61DAFB;
+  border: 0.5px solid rgba(0,0,0,0.5);
+}
+
+.indicator.finish:after {
+  content: '\2713'; /* https://www.toptal.com/designers/htmlarrows/symbols/check-mark/ */
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: -3px;
+  height: 100%;
+  width: 100%;
+  font-size: 50px;
+  text-align:center;
+  line-height: 0;
+  color: #61DAFB;
+  text-shadow: -1px 1px 2px rgba(0,0,0,0.25);
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #333;
+}
+
+.indicator.active.finish:after {
+  color: white;
+  -webkit-text-stroke-color: violet;
+}
+
+.controller-container {
+  text-align:center;
+}
+
+.previous-button,
+.next-button {
+  min-width: 100px;
+  text-transform: uppercase;
+  margin-right: 15px;
+  box-shadow: -2px 2px 4px rgba(0,0,0,0.25);
+}
+
+.previous-button:hover,
+.next-button:hover {
+  box-shadow: none;
+}
+
+.success-tab .fancy-h1 {
+  margin-bottom: 50px;
+  -webkit-text-stroke-color: rgb(87,184,70);
+}
+
+.success-tab p {
+  color: rgb(87,184,70);
+  text-align: center;
+}
+
+.form-submit-success-check {
+  display: none;
+  text-align: center;
+  font-size: 150px;
+  color: white;
+  line-height: 0.5;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgb(87,184,70);
+  text-shadow: -2px 2px 4px rgba(0,0,0,0.15);
+  margin-top: 50px;
+}
+
+
+/* =============================================================================
+                        Media Queries (Mobile First)
+============================================================================= */
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default. */
+
+
+/* ===============================
+Small devices (landscape phones, 576px - 767px)
+================================ */
+
+
+@media (min-width: 576px) {
+}
+
+
+/* ===============================
+Medium devices (tablets, 768px - 991px)
+================================ */
+
+
+@media (min-width: 768px) {
+}
+
+
+/* ===============================
+Large devices (desktops, 992px - 1199px)
+================================ */
+
+
+@media (min-width: 992px) {
+}
+
+
+/* ===============================
+Extra large devices (large desktops, 1200px and up)
+================================ */
+
+
+@media (min-width: 1200px) {
+}
